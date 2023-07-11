@@ -18,9 +18,16 @@ const sidemenu = document.getElementById('sidemenu');
 const dropzone = $('#drop-zone');
 const btnUpload = $('#btn-file-upload');
 const fileChooser = $('#file-chooser');
+const deleteIcon = $('#delete-icon');
 let selectedFiles =[];
 
+deleteIcon.on('click',(evt)=>{
+    evt.preventDefault();
+    selectedFiles=[];
+    $('#drop-zone > div').remove();
 
+
+});
 p1.addEventListener('click', function () {
     opentab('skills');
 });
@@ -49,7 +56,7 @@ fileChooser.on('change', (event) => {
     selectedFiles = Array.from(event.target.files);
 
     selectedFiles.forEach(function (file) {
-        const fileItem = $(`<div>${file.name}</div>`);
+        const fileItem = $(`<div id="file-name">${file.name}</div>`);
         dropzone.append(fileItem);
     });
 });
@@ -58,19 +65,20 @@ dropzone.on('dragover',(evt)=>{
     evt.preventDefault();
 
 });
-
 dropzone.on('drop',(evt)=>{
     evt.preventDefault();
     const droppedFiles = evt.originalEvent.dataTransfer.files;
     selectedFiles = Array.from(droppedFiles);
 
     selectedFiles.forEach(function (file) {
-        const fileItem = $(`<div>${file.name}</div>`);
+        const fileItem = $(`<div id="file-name">${file.name}</div>`);
         dropzone.append(fileItem);
     });
 
 
 });
+
+
 
 btnSubmit.addEventListener('click', (event) => {
     event.preventDefault();
@@ -78,6 +86,8 @@ btnSubmit.addEventListener('click', (event) => {
     sendFiles();
 
 });
+
+
 
 function opentab(tabname) {
     for (let i = 0; i < tabLinks.length; i++) {
@@ -167,7 +177,7 @@ function resetForm(clearData) {
         txtName.value = '';
         txtEmail.value = '';
         txtMessage.value = '';
-        dropzone.empty();
+        $('#drop-zone > div').remove();
     }
 }
 

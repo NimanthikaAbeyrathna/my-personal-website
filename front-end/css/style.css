@@ -11,7 +11,7 @@ html {
 
 body {
 
-    background-color: grey;
+    background-color: dodgerblue;
     color: white;
 }
 
@@ -22,11 +22,13 @@ header {
     background-size: cover;
     background-position: center;
     color: white;
+    padding: 0 150px;
 
 }
 
 .container {
     padding: 10px 10%;
+
 }
 
 nav {
@@ -34,6 +36,7 @@ nav {
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+
 
 }
 
@@ -178,53 +181,284 @@ nav ul li a:hover::after {
 
 }
 
-/*services*/
-#services {
-    padding: 30px 0;
-}
+/*skills*/
 
-.services-list {
+#skills2{
+    padding: 0 200px;
+}
+.main-text h2{
+    font-size: 60px;
+    font-weight: 600;
+}
+.skill-main{
+    padding: 0 10px;
+    width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 40px;
-    margin-top: 50px;
+    grid-template-columns: repeat(2,1fr);
+    grid-row-gap: 30px;
+    grid-column-gap: 50px;
+}
+.skill-bar{
+    margin-bottom: 2.3rem;
 
 }
-
-.services-list div {
-    background-color: #262626;
-    padding: 40px;
-    font-size: 13px;
-    font-weight: 300;
-    border-radius: 10px;
-    transition: background 0.5s, transform 0.5s;
-
-}
-
-.services-list div i {
-    font-size: 50px;
-    margin-bottom: 30px;
-}
-
-.services-list div h2 {
-    font-size: 30px;
+.skill-main h3{
+    margin-bottom: 2rem;
+    font-size: 20px;
     font-weight: 500;
-    margin-bottom: 15px;
+    text-align: center;
+}
+.skill-left .skill-bar .info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+.skill-left .skill-bar .bar{
+    width: 100%;
+    height: 10px;
+    background-color: rgba(38, 38, 38, 0.85);
+    border-radius: 25px;
+    margin-top: 10px;
+    position: relative;
+}
+.skill-right .skill-bar .info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+.skill-right .skill-bar .bar{
+    width: 100%;
+    height: 10px;
+    background-color: rgba(38, 38, 38, 0.85);
+    border-radius: 25px;
+    margin-top: 10px;
+    position: relative;
+}
+.skill-bar .bar span{
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    border-radius: 25px;
+    box-shadow: 0 0 5px #fff,
+    inset 0 0 5px #fff,
+    0 0 20px #8a2be2,
+    inset 0 0 20px #8a2be2,
+    0 0 40px #8a2be2,
+    inset 0 0 40px #8a2be2;
 
 }
-
-.services-list div a {
-    text-decoration: none;
-    color: white;
-    font-size: 12px;
-    margin-top: 20px;
-    display: inline-block;
-}
-
-.services-list div:hover {
+.skill-bar .bar span:hover{
     background-color: blueviolet;
-    transform: translateY(-10px);
 }
+.skill-bar .bar .HTML5{
+    width: 75%;
+    animation: HTML5 2s;
+}
+@keyframes HTML5 {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 75%;
+    }
+}
+
+.skill-bar .bar .CSS3{
+    width: 75%;
+    animation: CSS3 2s;
+}
+@keyframes CSS3 {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 75%;
+    }
+}
+.skill-bar .bar .ECMAScript{
+    width: 75%;
+    animation: ECMAScript 2s;
+}
+
+@keyframes ECMAScript {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 75%;
+    }
+}
+
+.skill-bar .bar .Typescript{
+    width: 70%;
+    animation: Typescript 2s;
+}
+
+@keyframes Typescript {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 70%;
+    }
+}
+
+.skill-bar .bar .Java{
+    width: 80%;
+    animation: Java 2s;
+}
+
+@keyframes Java {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 80%;
+    }
+}
+.skill-bar .bar .SASS{
+    width: 75%;
+    animation: SASS 2s;
+}
+
+@keyframes SASS {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 75%;
+    }
+}
+
+.skill-bar .bar .SQL{
+    width: 75%;
+    animation: SQL 2s;
+}
+
+@keyframes SQL {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 75%;
+    }
+}
+
+.skill-bar .bar .JavaFX{
+    width: 80%;
+    animation: JavaFX 2s;
+}
+
+@keyframes JavaFX {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 80%;
+    }
+}
+
+.skill-bar .bar .Spring{
+    width: 78%;
+    animation: Spring 2s;
+}
+
+@keyframes Spring {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 78%;
+    }
+}
+
+.skill-bar .bar .Springboot{
+    width: 75%;
+    animation: Springboot 2s;
+}
+
+@keyframes Springboot {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 75%;
+    }
+}
+
+.skill-bar .bar .Hibernate{
+    width: 70%;
+    animation: Hibernate 2s;
+}
+
+@keyframes Hibernate {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 70%;
+    }
+}
+
+.skill-bar .bar .Bootstrap{
+    width: 80%;
+    animation: Bootstrap 2s;
+}
+
+@keyframes Bootstrap {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 80%;
+    }
+}
+
+.skill-bar .bar .Materialize{
+    width: 80%;
+    animation: Materialize 2s;
+}
+
+@keyframes Materialize {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 80%;
+    }
+}
+
+.skill-bar .bar .Angular{
+    width: 80%;
+    animation: Angular 2s;
+}
+
+@keyframes Angular {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 80%;
+    }
+}
+
+.skill-bar .bar .JQuery{
+    width: 80%;
+    animation: JQuery 2s;
+}
+
+@keyframes JQuery {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 80%;
+    }
+}
+
 
 /*portfolio*/
 #portfolio {
@@ -426,6 +660,7 @@ form input, form textarea {
 }
 #drop-zone{
     overflow: auto;
+    position: relative;
 }
 
 form .btn2 {
@@ -435,6 +670,20 @@ form .btn2 {
     cursor: pointer;
 
 
+}
+#delete-icon{
+    width: 25px;
+    height: 25px;
+    fill: white;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 10px;
+
+
+}
+#delete-icon:hover{
+    fill: blueviolet;
 }
 
 .copyright {
@@ -456,6 +705,8 @@ nav .xyz {
 @media only screen and (max-width: 600px) {
     #header {
         background-image: url(/img/mobile.png);
+        padding: 0 20px;
+        margin: 0;
     }
 
     .logo {
@@ -541,6 +792,20 @@ nav .xyz {
         margin-right: 20px;
     }
 
+    #skills2{
+        padding: 0 10px;
+    }
+    .skill-main {
+        padding: 0 10px;
+    }
+
+    .main-text h2{
+        font-size: 40px;
+        font-weight: 600;
+    }
+    .skill-main h3 {
+        font-size: 16px;
+    }
     .contact-left, .contact-right {
         flex-basis: 100%;
 
